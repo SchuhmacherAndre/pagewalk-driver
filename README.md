@@ -1,5 +1,5 @@
 ## What is this?
-100bandz is a .sys driver for windows, originally intented to be used as an "educational EAC anticheat bypass", but I have lost most interest in this project, this can serve as a good base to learn from/expand upon.  
+pagewalk driver for windows, originally intented to be used as an "educational EAC anticheat bypass". This can serve as a good base to learn from/expand upon.  
 There are currently a lot of features missing, like the communication implementation betweem UM and KM, but as i wrote in the roadmap, this shouldnt be hard to do - either map a rw memory area of like 2 bytes, should be plenty to communicate OR map enough for an encrypted aes string.
 
 ## Current Features
@@ -27,10 +27,5 @@ LOGGING HEADER
 | `MiDoMapped` | ❌ DO NOT USE | - KeStackAttachProcess |
 | `MiDoPoolCopy` | ❌ DO NOT USE | - KeStackAttachProcess |
 
-## Logger Showcase
-![Logger SS](https://i.ibb.co/X5cSZpd/image.png)
-
-
 # Credits
 - [SchuhmacherAndre](https://github.com/SchuhmacherAndre)
-- [n0verify](https://github.com/n0verify)
