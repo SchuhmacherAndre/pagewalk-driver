@@ -1,17 +1,15 @@
 ## What is this?
 pagewalk driver for windows, originally intented to be used as an "educational EAC anticheat bypass". This can serve as a good base to learn from/expand upon.  
-There are currently a lot of features missing, like the communication implementation betweem UM and KM, but as i wrote in the roadmap, this shouldnt be hard to do - either map a rw memory area of like 2 bytes, should be plenty to communicate OR map enough for an encrypted aes string.
+There are currently a lot of features missing, like the communication implementation betweem UM and KM, but as i wrote in the roadmap, this shouldnt be hard to do - map a rw memory area of a couple bytes, should be plenty to communicate OR map enough for an encrypted aes string.
 
 ## Current Features
-Build release/debug x64 - should automatically be set-up.  
 SSDT TABLE LOOKUP  
 PHYSICAL MEMORY R&W  
 AES ENCRYPTION  
 LOGGING HEADER  
 
 ## Roadmap
-* `rewrite physical memory operations` I'm currently reading up on translation of virt->phys, and how it exactly works. next up is a complete rewrite.
-* `vuln chinese driver` i'll try finding a vulnerable preferably chinese driver, admin->kernel exploit, question is, how should we go about mapping our driving using their kernel driver? maybe it doesnt even have to be vulnerable, make we can simply patch its memory <- hollow it out, AND patch it on disk after we load our driver (or `disable eac integrity check`) eac shouldnt be checking memory of signed modules, so we should be good there
+* `vuln chinese driver` i'll try finding a vulnerable preferably driver, admin->kernel exploit, question is, how should we go about mapping our driving using their kernel driver? maybe it doesnt even have to be vulnerable, make we can simply patch its memory <- hollow it out, AND patch it on disk after we load our driver (or `disable eac integrity check`) eac shouldnt be checking memory of signed modules, so we should be good there
 * `usermode -> driver communications` honestly i think a shared memory pool with AES256 encryption is good enough, no need to overcomplicate it
 
 # TODO Once bypass is complete
